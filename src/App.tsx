@@ -32,7 +32,12 @@ const classes = {
 }
 
 function App() {
-  const [dataTable, setDataTable] = useState<Array<{[key: string]: any;}>>([])
+  const [dataTable, setDataTable] = useState<Array<{
+    userId: number;
+    id: number;
+    title: string;
+    body: string;
+  }>>([])
   const [search, setSearch] = useState('')
   const [totalClicked, setTotalClicked] = useState(0)
   const [totalRefetch, setTotalRefetch] = useState(0)
